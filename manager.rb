@@ -16,11 +16,11 @@ class Employee
   def give_annual_raise
     @salary = @salary * 1.05
   end
-
-  
 end 
 
 class Manager < Employee 
+  attr_reader :employeesgit 
+
   def initialize(input_options)
     super(input_options)
     @employees = input_options[:employees]
@@ -63,7 +63,9 @@ manager = Manager.new(
                       )
 
 p employee_1.salary 
+p employee_2.salary
 manager.give_all_raises
 p employee_1.salary
+p employee_2.salary 
 manager.fire_all
 p employee_1 
